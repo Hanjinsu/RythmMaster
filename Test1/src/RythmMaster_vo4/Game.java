@@ -34,8 +34,8 @@ public class Game extends Thread {
 	private String musicTitle;
 	private Music gameMusic;
 	
-	public static int combo = 0; //dd
-	public static int score = 0; //dd
+	public static int combo = 0;
+	public static int score = 0;
 	public static int comboBonus = combo / 2;
 	public static int life = 100;
 	public static int lifeBonus = combo / 10;
@@ -53,8 +53,9 @@ public class Game extends Thread {
 		if(DynamicBeat.isGameOver)
 		{
 			g.setColor(Color.RED);
-			g.setFont(new Font("Elephant", Font.BOLD, 80));
+			g.setFont(new Font("Malgun Gothic", Font.BOLD, 80));
 			g.drawString("GAME OVER", 340, 350);
+			
 		}
 		else {
 			g.drawImage(noteRouteAImage, 228, 30, null);
@@ -219,7 +220,7 @@ public class Game extends Thread {
 	public void dropNotes(String titleName) {
 		Beat[] beats = null;
 		if(titleName.equals("Janji - Heroes Tonight") && difficulty.equals("Easy")) {
-			int startTime = 1000- Main.REACH_TIME*1000;
+			int startTime = 1000 - Main.REACH_TIME*1000;
 			int gap = 125;
 			beats = new Beat[] {
 					new Beat(startTime,"S"),
@@ -234,6 +235,145 @@ public class Game extends Thread {
 		else if(titleName.equals("Tubo - Life") && difficulty.equals("Easy")) {
 			int startTime = 1000- Main.REACH_TIME*1000;
 			int gap = 125;
+			Main.NOTE_SPEED = 10;
+			beats = new Beat[] {
+					new Beat(startTime,"A"),
+					new Beat(startTime+gap*2,"A"),
+					new Beat(startTime+gap*5,"A"),
+					new Beat(startTime+gap*7,"S"),
+					new Beat(startTime+gap*12,"S"),
+					new Beat(startTime+gap*15,"S"),
+					new Beat(startTime+gap*17,"S"),
+					new Beat(startTime+gap*20,"S"),
+					
+					new Beat(startTime+gap*23,"D"),
+					new Beat(startTime+gap*30,"D"),
+					new Beat(startTime+gap*32,"D"),
+					new Beat(startTime+gap*35,"D"),
+					
+					
+					new Beat(startTime+gap*38,"F"),
+					new Beat(startTime+gap*45,"F"),
+					new Beat(startTime+gap*47,"F"),
+					new Beat(startTime+gap*50,"F"),
+					
+					
+					new Beat(startTime+gap*50,"H"),
+					
+					new Beat(startTime+gap*53,"H"),
+					new Beat(startTime+gap*60,"H"),
+					new Beat(startTime+gap*62,"H"),
+					new Beat(startTime+gap*65,"H"),
+					
+					
+					new Beat(startTime+gap*68,"J"),
+					new Beat(startTime+gap*75,"J"),
+					new Beat(startTime+gap*77,"J"),
+					new Beat(startTime+gap*80,"J"),
+					
+					new Beat(startTime+gap*83,"K"),
+					new Beat(startTime+gap*90,"K"),
+					new Beat(startTime+gap*92,"K"),
+					new Beat(startTime+gap*95,"K"),
+					
+					new Beat(startTime+gap*98,"L"),
+					new Beat(startTime+gap*105,"L"),
+					new Beat(startTime+gap*107,"L"),
+					new Beat(startTime+gap*110,"L"),
+					
+					
+					new Beat(startTime+gap*112,"L"),
+					new Beat(startTime+gap*114,"J"),
+					new Beat(startTime+gap*116,"D"),
+					new Beat(startTime+gap*118,"A"),
+					
+					
+					new Beat(startTime+gap*127,"A"),
+					new Beat(startTime+gap*129,"S"),
+					new Beat(startTime+gap*131,"D"),
+					new Beat(startTime+gap*133,"A"),
+					
+					
+					new Beat(startTime+gap*142,"L"),
+					new Beat(startTime+gap*144,"J"),
+					new Beat(startTime+gap*146,"D"),
+					new Beat(startTime+gap*148,"A"),
+					
+					
+					new Beat(startTime+gap*157,"A"),
+					new Beat(startTime+gap*159,"S"),
+					new Beat(startTime+gap*161,"D"),
+					new Beat(startTime+gap*163,"A"),
+					
+					
+					new Beat(startTime+gap*172,"L"),
+					new Beat(startTime+gap*174,"J"),
+					new Beat(startTime+gap*176,"D"),
+					new Beat(startTime+gap*178,"A"),
+					
+					
+					new Beat(startTime+gap*187,"A"),
+					new Beat(startTime+gap*189,"S"),
+					new Beat(startTime+gap*191,"D"),
+					new Beat(startTime+gap*193,"A"),
+					
+					
+					new Beat(startTime+gap*202,"L"),
+					new Beat(startTime+gap*204,"J"),
+					new Beat(startTime+gap*206,"D"),
+					new Beat(startTime+gap*208,"A"),
+					
+					
+					new Beat(startTime+gap*217,"A"),
+					new Beat(startTime+gap*219,"S"),
+					new Beat(startTime+gap*221,"D"),
+					new Beat(startTime+gap*223,"L"),
+					
+
+					new Beat(startTime+gap*233,"A"),
+					new Beat(startTime+gap*233,"D"),
+					new Beat(startTime+gap*235,"A"),
+					new Beat(startTime+gap*235,"D"),
+		
+					
+					new Beat(startTime+gap*249,"S"),
+					new Beat(startTime+gap*249,"F"),
+					new Beat(startTime+gap*251,"S"),
+					new Beat(startTime+gap*251,"F"),
+					
+					
+					new Beat(startTime+gap*263,"H"),
+					new Beat(startTime+gap*263,"K"),
+					new Beat(startTime+gap*265,"H"),
+					new Beat(startTime+gap*265,"K"),
+					
+					new Beat(startTime+gap*277,"J"),
+					new Beat(startTime+gap*277,"L"),
+					new Beat(startTime+gap*279,"J"),
+					new Beat(startTime+gap*279,"L"),
+					
+					
+					new Beat(startTime+gap*291,"H"),
+					new Beat(startTime+gap*291,"K"),
+					new Beat(startTime+gap*293,"H"),
+					new Beat(startTime+gap*293,"K"),
+					
+					new Beat(startTime+gap*304,"S"),
+					new Beat(startTime+gap*304,"F"),
+					new Beat(startTime+gap*306,"S"),
+					new Beat(startTime+gap*306,"F"),
+					
+					new Beat(startTime+gap*318,"A"),
+					new Beat(startTime+gap*318,"D"),
+					new Beat(startTime+gap*320,"A"),
+					new Beat(startTime+gap*320,"D"),
+					
+			};
+		}
+		else if(titleName.equals("Tubo - Life") && difficulty.equals("Hard")) {
+			int startTime = 1000- Main.REACH_TIME*1000;
+			int gap = 125;
+			Main.NOTE_SPEED = 20;
 			beats = new Beat[] {
 					new Beat(startTime,"A"),
 					new Beat(startTime+gap*2,"A"),

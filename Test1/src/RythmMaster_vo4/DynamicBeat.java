@@ -309,6 +309,9 @@ public class DynamicBeat extends JFrame {
 			public void mousePressed(MouseEvent e) {
 				Music buttonEnteredMusic = new Music("buttonPressedMusic.mp3", false);
 				buttonEnteredMusic.start();
+				DynamicBeat.isGameOver = false;
+				Game.score = 0;
+				Game.life = 100;
 				backMain();
 			}
 		});
@@ -413,8 +416,7 @@ public class DynamicBeat extends JFrame {
 		rightButton.setVisible(true);
 		easyButton.setVisible(true);
 		hardButton.setVisible(true);
-		background = new ImageIcon(Main.class.getResource("../images/mainBackground.jpg"))
-				.getImage();
+		background = new ImageIcon(Main.class.getResource("../images/mainBackground.jpg")).getImage();
 		backButton.setVisible(false);
 		selectTrack(nowSelected);
 		isGameScreen = false;
@@ -423,6 +425,7 @@ public class DynamicBeat extends JFrame {
 	
 	
 	public void gameOver() {
+		isGameOver = true;
 		
 	}
 
