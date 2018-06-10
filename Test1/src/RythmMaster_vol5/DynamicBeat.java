@@ -234,7 +234,7 @@ public class DynamicBeat extends JFrame {
 		add(rightButton);
 		
 		easyButton.setVisible(false);
-		easyButton.setBounds(375, 580, 250, 67);
+		easyButton.setBounds(355, 580, 280, 85);
 		easyButton.setBorderPainted(false);
 		easyButton.setContentAreaFilled(false);
 		easyButton.setFocusPainted(false);
@@ -262,7 +262,7 @@ public class DynamicBeat extends JFrame {
 		add(easyButton);
 		
 		hardButton.setVisible(false);
-		hardButton.setBounds(655, 580, 250, 67);
+		hardButton.setBounds(640, 580, 280, 85);
 		hardButton.setBorderPainted(false);
 		hardButton.setContentAreaFilled(false);
 		hardButton.setFocusPainted(false);
