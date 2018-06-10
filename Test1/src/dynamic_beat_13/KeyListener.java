@@ -10,7 +10,10 @@ public class KeyListener extends KeyAdapter {
 		if(DynamicBeat.game == null) {
 			return;
 		}
-		if(e.getKeyCode() == KeyEvent.VK_S) {
+		if(e.getKeyCode() == KeyEvent.VK_A) {
+			DynamicBeat.game.pressA();
+		}
+		else if(e.getKeyCode() == KeyEvent.VK_S) {
 			DynamicBeat.game.pressS();
 		}
 		else if(e.getKeyCode() == KeyEvent.VK_D) {
@@ -19,8 +22,8 @@ public class KeyListener extends KeyAdapter {
 		else if(e.getKeyCode() == KeyEvent.VK_F) {
 			DynamicBeat.game.pressF();
 		}
-		else if(e.getKeyCode() == KeyEvent.VK_SPACE) {
-			DynamicBeat.game.pressSpace();
+		else if(e.getKeyCode() == KeyEvent.VK_H) {
+			DynamicBeat.game.pressH();
 		}
 		else if(e.getKeyCode() == KeyEvent.VK_J) {
 			DynamicBeat.game.pressJ();
@@ -37,18 +40,21 @@ public class KeyListener extends KeyAdapter {
 	public void keyReleased(KeyEvent e) {
 		if(DynamicBeat.game == null)
 			return;
-		if(e.getKeyCode() == KeyEvent.VK_S) {
+		if(e.getKeyCode() == KeyEvent.VK_A) {
+			DynamicBeat.game.releaseA();
+    	}
+		else if(e.getKeyCode() == KeyEvent.VK_S) {
 			DynamicBeat.game.releaseS();
     	}
 		else if(e.getKeyCode() == KeyEvent.VK_D) {
 			DynamicBeat.game.releaseD();
-    	}
+    	}           
 		else if(e.getKeyCode() == KeyEvent.VK_F) {
 			DynamicBeat.game.releaseF();
-    	}           
-		else if(e.getKeyCode() == KeyEvent.VK_SPACE) {
-			DynamicBeat.game.releaseSpace();
-    	}           
+    	}       
+		else if(e.getKeyCode() == KeyEvent.VK_H) {
+			DynamicBeat.game.releaseH();
+    	}          
 		else if(e.getKeyCode() == KeyEvent.VK_J) {
 			DynamicBeat.game.releaseJ();
     	}           	

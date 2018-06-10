@@ -68,8 +68,16 @@ public class DynamicBeat extends JFrame {
 	public static Game game;
 	
 	public DynamicBeat() {
+
+		trackList.add(new Track("TuboLifeTitle.jpg", "TuboLifeTitle.jpg",
+				"GameWall.jpg", "Tobu - Life.mp3", "Tobu - Life.mp3", "Tubo - Life"));
+		trackList.add(new Track("JanjiHeroesTitle.jpg", "JanjiHeroesTitle.jpg",
+				"GameWall.jpg", "Janji - Heroes Tonight.mp3", "Janji - Heroes Tonight.mp3", "Janji - Heroes Tonight"));
+		/*trackList.add(new Track("FakeLoveTitle.jpg", "FakeLoveTitle.jpg",
+				"GameWall.jpg", "BTS-FAKELOVE.mp3", "BTS-FAKELOVE.mp3", "BTS-FAKELOVE"));*/
+		
 		setUndecorated(true);
-		setTitle("Dynamic Beat");
+		setTitle("Rythm Mater");
 		setSize(Main.SCREEN_WIDTH, Main.SCREEN_HEIGHT);
 		setResizable(false);
 		setLocationRelativeTo(null);
@@ -81,13 +89,6 @@ public class DynamicBeat extends JFrame {
 		addKeyListener(new KeyListener());
 		
 		introMusic.start();
-
-		trackList.add(new Track("TuboLifeTitle.jpg", "TuboLifeTitle.jpg",
-				"GameWall.jpg", "Tobu - Life.mp3", "Tobu - Life.mp3", "Tubo - Life"));
-		trackList.add(new Track("JanjiHeroesTitle.jpg", "JanjiHeroesTitle.jpg",
-				"GameWall.jpg", "Janji - Heroes Tonight.mp3", "Janji - Heroes Tonight.mp3", "Janji - Heroes Tonight"));
-		/*trackList.add(new Track("FakeLoveTitle.jpg", "FakeLoveTitle.jpg",
-				"GameWall.jpg", "BTS-FAKELOVE.mp3", "BTS-FAKELOVE.mp3", "BTS-FAKELOVE"));*/
 		
 		exitButton.setBounds(1245, 0, 30, 30);
 		exitButton.setBorderPainted(false);
@@ -350,6 +351,11 @@ public class DynamicBeat extends JFrame {
 			game.screenDraw(g);
 		}
 		paintComponents(g);
+		try {
+			Thread.sleep(5);
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
 		this.repaint();
 	}
 	
@@ -390,8 +396,9 @@ public class DynamicBeat extends JFrame {
 				.getImage();
 		backButton.setVisible(true);
 		isGameScreen = true;
-		setFocusable(true);
 		game = new Game(trackList.get(nowSelected).getTitleName(), difficulty, trackList.get(nowSelected).getGameMusic());
+		game.start();
+		setFocusable(true);
 	}
 	
 	public void backMain() {

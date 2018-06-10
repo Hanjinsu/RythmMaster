@@ -197,7 +197,23 @@ public class Game extends Thread {
 					new Beat(startTime+gap*6,"D"),
 					new Beat(startTime+gap*8,"S"),
 					new Beat(startTime+gap*12,"F"),
-					new Beat(startTime+gap*16,"D"),
+					new Beat(startTime+gap*16,"J"),
+					new Beat(startTime+gap*16,"K"),
+					new Beat(startTime+gap*18,"L"),
+					new Beat(startTime+gap*20,"H"),
+					new Beat(startTime+gap*22,"F"),
+					new Beat(startTime+gap*24,"D"),
+					new Beat(startTime+gap*24,"S"),
+					new Beat(startTime+gap*28,"D"),
+					new Beat(startTime+gap*28,"K"),
+					new Beat(startTime+gap*30,"D"),
+					new Beat(startTime+gap*32,"D"),
+					new Beat(startTime+gap*32,"G"),
+					new Beat(startTime+gap*34,"S"),
+					new Beat(startTime+gap*34,"A"),
+					new Beat(startTime+gap*36,"S"),
+					new Beat(startTime+gap*36,"S"),
+					
 			};
 		}
 		
