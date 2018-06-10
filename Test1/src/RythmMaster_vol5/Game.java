@@ -27,6 +27,7 @@ public class Game extends Thread {
 	private Image noteRouteLImage = new ImageIcon(Main.class.getResource("../images/noteRoute.png")).getImage();
 	private Image judgeImage = new ImageIcon(Main.class.getResource("../images/None.png")).getImage();
 	private Image comboImage = new ImageIcon(Main.class.getResource("../images/Combo.png")).getImage();
+	private Image BlueFlame = new ImageIcon(Main.class.getResource("../images/BlueFlame.png")).getImage();
 	
 	
 	private String titleName;
@@ -77,6 +78,7 @@ public class Game extends Thread {
 			g.drawImage(gameInfoImage, 0, 660, null);
 			g.drawImage(judgementLineImage, 0, 580, null);
 			g.drawImage(judgeImage, 450, 380, null);
+			g.drawImage(BlueFlame, 440, 280, null);
 			for(int i = 0; i < noteList.size(); i++)
 			{
 				Note note = noteList.get(i);
