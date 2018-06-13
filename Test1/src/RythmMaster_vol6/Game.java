@@ -530,6 +530,11 @@ public class Game extends Thread {
 					new Beat(startTime+gap*320,"A"),
 					new Beat(startTime+gap*320,"D"),
 					
+					new Beat(startTime+gap*318,"A"),
+					new Beat(startTime+gap*318,"D"),
+					new Beat(startTime+gap*320,"A"),
+					new Beat(startTime+gap*320,"D"),
+					
 			};
 		}
 		int i=0;
